@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nestor Sebastian | XV años</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="contenedor-principal">
+
+    <!-- ========================================================= -->
+    <!--  SECCIÓN 1: PORTADA -->
+    <!-- ========================================================= -->
+    <div class="invitacion">
+  <div class="contenido">
+    <a href="#textura" class="boton-ingresar" onclick="PlayAudio()">Entrar</a>
+  </div>
+</div>
+
+<div class="seccion-textura" id="textura"></div>
+
+<div class="seccion-car-verde" id="retratos">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="cab1.png" alt="Detalle decorativo" class="icono-cocodrilo">
+    <h2>Néstor Sebastián</h2>
+
+<p class="mensaje-retratos">
+  15 años, nuevas experiencias y grandes momentos por vivir.<br><br>
+  ¡Acompáñame a celebrar!
+</p>
+    <div class="carrusel">
+      <img id="imagen-carrusel" src="seb8.jpeg" alt="Retrato de Sebastian">
+    </div>
+  </div>
+</div>
+
+<div class="seccion-coc-verde" id="cuenta-regresiva">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="cab2.png" alt="Detalle decorativo" class="icono-cocodrilo">
+    <h2>¡Cada vez falta menos!</h2>
+
+<p class="mensaje-cuenta">
+  Se acerca el momento de celebrar mis XV años.<br><br>
+
+  Una noche para disfrutar, compartir y pasarla bien
+  con familiares y amigos.
+</p>
+
+<br><strong>05 de diciembre | 7:00 p. m.</strong><br><br>
+    <div class="reloj">
+      <div><span id="dias2">0</span><small>días</small></div>
+      <div><span id="horas2">0</span><small>horas</small></div>
+      <div><span id="minutos2">0</span><small>min</small></div>
+      <div><span id="segundos2">0</span><small>seg</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="seccion-rec-verde" id="ubicacion">
+  <div class="contenido-ubicacion animado-scroll">
+
+    <img src="cab3.png" alt="Ubicación" class="icono-cocodrilo">
+
+    <h2>¿Dónde nos vemos?</h2>
+
+    <p>
+      Te espero en el siguiente lugar para celebrar mis XV años.
+    </p>
+
+    <p>
+      <strong>Dirección:</strong><br>
+      Calle Salto del Agua, Tetepango, Hgo., México.
+    </p>
+
+    <div class="mapa-contenedor">
+      <iframe
+        src="https://maps.google.com/maps?q=20.106352,-99.156397&z=17&output=embed"
+        frameborder="0">
+      </iframe>
+    </div>
+
+    <a href="https://maps.apple/p/_rV4V5UpsSCvNB"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="boton-mapa hover-effect">
+      Cómo llegar
+    </a>
+
+  </div>
+</div><div class="seccion-conf-verde" id="confirmacion">
+  <div class="contenido-ubicacion animado-scroll">
+    <img src="cab4.png" alt="Confirmación" class="icono-cocodrilo">
+    <h2>Confirma tu asistencia</h2>
+
+<p class="mensaje-confirmacion">
+  Espero contar contigo para celebrar mis XV años
+  y disfrutar de una gran noche.<br><br>
+
+  Confirma tu asistencia llenando el siguiente formulario.
+</p>
+
+    <section class="rsvp">
+      <form id="form-confirmacion">
+        <input type="text" placeholder="Escribe tu nombre" required>
+        <select name="acompanantes" required>
+          <option value="" disabled selected>Selecciona cuántos acompañantes llevarás</option>
+          <option value="0">0 (Voy solo/a)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <textarea placeholder="Déjame un mensaje (opcional)"></textarea>
+        <button type="submit">Confirmar mi asistencia</button>
+      </form>
+      <div id="mensaje-exito"></div>
+    </section>
+  </div>
+</div>
+    <!-- ========================================================= -->
+    <!-- ❤️ SECCIÓN 7: PIE DE PÁGINA -->
+    <!-- ========================================================= -->
+    <footer class="footer-invitacion" id="footer">
+  <div class="contenido-footer">
+
+    <p class="footer-agradecimiento">
+      Gracias por ser parte<br>
+      de esta celebración.
+    </p>
+
+    <p class="footer-despedida">
+      ¡Nos vemos en mis XV!
+    </p>
+
+    <div class="footer-separador">
+      <span>◆</span>
+    </div>
+
+    <h2 class="footer-nombre">
+      Néstor Sebastián
+    </h2>
+
+  </div>
+</footer>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 🎵 AUDIO DE FONDO -->
+  <!-- ========================================================= -->
+  <audio id="musica1" autoplay loop>
+    <source src="lana.mp3" type="audio/mpeg">
+    Tu navegador no soporta reproducción de audio.
+  </audio>
+
+  <!-- ========================================================= -->
+  <!-- 📦 SCRIPT DEL FORMULARIO -->
+  <!-- ========================================================= -->
+  <script type="module" src="form.js"></script>
+</body>
+</html>
